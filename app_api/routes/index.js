@@ -15,3 +15,5 @@ module.exports = router;
 // home page? I.E. should it be router.delete('/blog/:blog-id . . . or is it okay thw way it is?
 
 // Do I need router.get for blog-add ???
+
+// Testing.
