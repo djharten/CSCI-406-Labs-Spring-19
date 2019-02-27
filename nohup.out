@@ -1,0 +1,30 @@
+
+> blogger@0.0.0 start /home/bitnami/blogger
+> node ./bin/www
+
+[0mGET /blog/blog-add [36m304 [0m12.333 ms - -[0m
+[0mGET /blog [36m304 [0m1.619 ms - -[0m
+[0mGET / [36m304 [0m2.452 ms - -[0m
+[0mGET /blog [36m304 [0m0.959 ms - -[0m
+[0mGET /blog/blog-add [36m304 [0m1.041 ms - -[0m
+[0mGET /blog [36m304 [0m0.799 ms - -[0m
+[0mGET / [36m304 [0m0.949 ms - -[0m
+[0mGET / [36m304 [0m0.865 ms - -[0m
+[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+[32minfo[39m:    Forever processing file: [90mapp.js[39m
+
+> blogger@0.0.0 start /home/bitnami/blogger
+> node ./bin/www
+
+Port 80 is already in use
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! blogger@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the blogger@0.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/bitnami/.npm/_logs/2019-02-15T02_51_00_219Z-debug.log
