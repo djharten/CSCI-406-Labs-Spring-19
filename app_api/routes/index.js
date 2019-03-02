@@ -16,4 +16,4 @@ module.exports = router;
 
 // Do I need router.get for blog-add ???
 
-// Testing.
+// NOTE: I MAY BE MISSING SOME GETS / THINGS IN THE router. - KEEP IN MIND.

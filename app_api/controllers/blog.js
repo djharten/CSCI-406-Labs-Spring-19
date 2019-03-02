@@ -8,12 +8,20 @@ var sendJsonResponse = function(res, status, content) {
     res.json(content);
 };
 
+module.exports.blogReadOne = function(req, res) {
+    blogList
+        .findById(req.params.blog-id)
+        .exec(function(err, blog) {
+            sendJsonResponse(res, 200, blog);
+        });
+};
+
 module.exports.blogListApi = function(req, res) {
     sendJsonResponse(res, 200, { "status" : "success"});
 };
 
 module.exports.blogAddOne = function(req, res) {
-    sendJsonResponse(res, 200, { "status" : "success"});
+    sendJsonResponse(res, 201, { "status" : "success"});
 };
 
 module.exports.blogReadOne = function(req, res) {
@@ -25,5 +33,5 @@ module.exports.blogEditOne = function(req, res) {
 };
 
 module.exports.blogDeleteOne = function(req, res) {
-    sendJsonResponse(res, 200, { "status" : "success"});
+    sendJsonResponse(res, 204, { "status" : "success"});
 };
