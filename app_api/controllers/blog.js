@@ -16,7 +16,7 @@ module.exports.blogReadOne = function(req, res) {
         });
 };
 
-module.exports.blogListApi = function(req, res) {
+module.exports.blogReadAll = function(req, res) {
     sendJsonResponse(res, 200, { "status" : "success"});
 };
 
