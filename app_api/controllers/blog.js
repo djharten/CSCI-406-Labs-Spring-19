@@ -11,7 +11,7 @@ var sendJsonResponse = function(res, status, content) {
 module.exports.blogReadOne = function(req, res) {
     console.log("This was attempted.");
     blogModel
-        .findById(req.params.blog-id)
+        .findById(req.params.blogid)
         .exec(function(err, blog) {
             console.log("This was attempted.");
             sendJsonResponse(res, 200, blog);
