@@ -24,8 +24,7 @@ module.exports.blogReadOne = function(req, res) {
 module.exports.blogReadOne = function(req, res) {
     if(req.params && req.params.blogid) {
         blogModel
-            .find()
-            //.findById(req.params.blogid)
+            .findById(req.params.blogid)
             .exec(function(err,blogger) {
                 if(!blogger) {
                     sendJsonResponse(res, 404, {
@@ -36,7 +35,6 @@ module.exports.blogReadOne = function(req, res) {
                     sendJsonResponse(res, 404, err);
                     return;
                 }
-                console.log(blogger);
                 sendJsonResponse(res, 200, blogger);
             });
     } else {
