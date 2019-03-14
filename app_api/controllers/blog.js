@@ -9,7 +9,7 @@ var sendJsonResponse = function(res, status, content) {
 };
 
 module.exports.blogReadOne = function(req, res) {
-    blogList
+    blogModel
         .findById(req.params.blog-id)
         .exec(function(err, blog) {
             sendJsonResponse(res, 200, blog);
