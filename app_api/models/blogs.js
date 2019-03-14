@@ -6,4 +6,4 @@ var blogSchema = new mongoose.Schema({
    createdOn: String
 });
 
-mongoose.model('blogList', blogSchema);
+mongoose.model('blogList', blogSchema, 'blogSchema');
