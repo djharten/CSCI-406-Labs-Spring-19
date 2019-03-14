@@ -8,6 +8,7 @@ var sendJsonResponse = function(res, status, content) {
     res.json(content);
 };
 
+/*
 module.exports.blogReadOne = function(req, res) {
     console.log("This was attempted. 1: ", req.params);
     console.log(req.params.blogid);
@@ -17,6 +18,30 @@ module.exports.blogReadOne = function(req, res) {
             console.log("This was attempted. 2");
             sendJsonResponse(res, 200, blogger);
         });
+};
+*/
+
+module.exports.blogReadOne = function(req, res) {
+    if(req.params && req.params.blogid) {
+        blogModel
+            .findById(req.params.blogid)
+            .exec(function(err,blogger) {
+                if(!blogger) {
+                    sendJsonResponse(res, 404, {
+                        "message": "blogid not found"
+                    });
+                    return;
+                } else if(err) {
+                    sendJsonResponse(res, 404, err);
+                    return;
+                }
+                sendJsonResponse(res, 200, blogger);
+            });
+    } else {
+        sendJsonResponse(res, 404, {
+            "message": "No blogid in request"
+        });
+    }
 };
 
 module.exports.blogReadAll = function(req, res) {
