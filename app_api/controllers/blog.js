@@ -9,12 +9,13 @@ var sendJsonResponse = function(res, status, content) {
 };
 
 module.exports.blogReadOne = function(req, res) {
-    console.log("This was attempted. 1");
+    console.log("This was attempted. 1: ", req.params);
+    console.log(req.params.blogid);
     blogModel
         .findById(req.params.blogid)
-        .exec(function(err, blog) {
+        .exec(function(err, blogger) {
             console.log("This was attempted. 2");
-            sendJsonResponse(res, 200, blog);
+            sendJsonResponse(res, 200, blogger);
         });
 };
 
