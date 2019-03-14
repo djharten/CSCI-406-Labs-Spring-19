@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 // NOTE: name in model is what we named blog.js in the "models"
 // directory  at the mongoose.model call at the bottom of the file
-var blogModel = mongoose.model('blogList');
+var blogModel = mongoose.model('Blog');
 
 var sendJsonResponse = function(res, status, content) {
     res.status(status);
