@@ -12,6 +12,7 @@ module.exports.blogReadOne = function(req, res) {
     blogModel
         .findById(req.params.blog-id)
         .exec(function(err, blog) {
+            console.log("This was attempted.");
             sendJsonResponse(res, 200, blog);
         });
 };
@@ -24,9 +25,11 @@ module.exports.blogAddOne = function(req, res) {
     sendJsonResponse(res, 201, { "status" : "success"});
 };
 
+/*
 module.exports.blogReadOne = function(req, res) {
     sendJsonResponse(res, 200, { "status" : "success"});
 };
+*/
 
 module.exports.blogEditOne = function(req, res) {
     sendJsonResponse(res, 200, { "status" : "success"});
