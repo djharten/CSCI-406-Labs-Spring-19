@@ -81,16 +81,43 @@ module.exports.blogAddOne = function(req, res) {
             });
 };
 
-/*
-module.exports.blogReadOne = function(req, res) {
-    sendJsonResponse(res, 200, { "status" : "success"});
-};
-*/
-
 module.exports.blogEditOne = function(req, res) {
-    sendJsonResponse(res, 200, { "status" : "success"});
+    console.log("Updating blog with id: " + req.params.id);
+    console.log(req.body);
+    blogModel
+        .findOneAndUpdate(
+            { _id: req.params.id },
+            { $set: {"blogTitle" : req.body.blogTitle }},
+            { $set: {"blogText" : req.body.blogText }},
+            function(err, blogger) {
+                if(err) {
+                    sendJsonResponse(res, 400, err);
+                } else {
+                    sendJsonResponse(res, 201, blogger);
+                }
+            }
+        );
 };
 
 module.exports.blogDeleteOne = function(req, res) {
-    sendJsonResponse(res, 204, { "status" : "success"});
+    var blogid = req.params.blogid;
+    if(blogid){
+        blogModel
+            .findByIdAndRemove(req.params.id)
+            .exec(
+                function(err) {
+                    if (err) {
+                        console.log(err);
+                        sendJsonResponse(res, 404, err);
+                        return;
+                    }
+                    console.log("blog id " + blogid + " deleted");
+                    sendJSONresponse(res, 204, null);
+                });
+    }
+    else {
+        sendJsonResponse(res, 404, {
+            "message": "no blogid"
+        });
+    }
 };
