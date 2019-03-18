@@ -8,20 +8,8 @@ var sendJsonResponse = function(res, status, content) {
     res.json(content);
 };
 
-/*
 module.exports.blogReadOne = function(req, res) {
-    console.log("This was attempted. 1: ", req.params);
-    console.log(req.params.blogid);
-    blogModel
-        .findById(req.params.blogid)
-        .exec(function(err, blogger) {
-            console.log("This was attempted. 2");
-            sendJsonResponse(res, 200, blogger);
-        });
-};
-*/
-
-module.exports.blogReadOne = function(req, res) {
+    console.log('Finding blog details', req.params);
     if(req.params && req.params.blogid) {
         blogModel
             .findById(req.params.blogid)
@@ -44,12 +32,53 @@ module.exports.blogReadOne = function(req, res) {
     }
 };
 
+var buildBlogList = function(req, res, results) {
+    var blogs = [];
+    results.forEach(function (obj) {
+        blogs.push({
+            blogTitle: obj.blogTitle,
+            blogText: obj.blogText,
+            createdOn: obj.createdOn
+        });
+    });
+    return blogs;
+};
+
 module.exports.blogReadAll = function(req, res) {
-    sendJsonResponse(res, 200, { "status" : "success"});
+    console.log('Creating all blogs list');
+    blogModel
+        .find()
+        .exec(function(err, blogger) {
+            if(!blogger) {
+                sendJsonResponse(res, 404 , {
+                    "message" : "No blogs found"
+                });
+                return;
+            }else if(err) {
+                console.log(err);
+                sendJsonResponse(res, 404, err);
+                return;
+            }
+            console.log(blogger);
+            sendJsonResponse(res, 200, buildBlogList(req, res, blogger));
+        });
 };
 
 module.exports.blogAddOne = function(req, res) {
-    sendJsonResponse(res, 201, { "status" : "success"});
+    console.log(req.body);
+    blogSch
+        .create({
+            blogTitle: req.body.blogTitle1,
+            blogText: req.body.blogText1
+        }, function(err, blogger) {
+                if(err) {
+                    console.log(err);
+                    sendJsonResponse(res,400,err);
+                } else {
+                    console.log(blog);
+                    sendJsonResponse(res,201,blogger);
+                }
+            });
 };
 
 /*
