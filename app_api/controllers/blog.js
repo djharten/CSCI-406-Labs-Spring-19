@@ -23,6 +23,7 @@ module.exports.blogReadOne = function(req, res) {
                     sendJsonResponse(res, 404, err);
                     return;
                 }
+                console.log(blogger);
                 sendJsonResponse(res, 200, blogger);
             });
     } else {
@@ -66,7 +67,7 @@ module.exports.blogReadAll = function(req, res) {
 
 module.exports.blogAddOne = function(req, res) {
     console.log(req.body);
-    blogSch
+    blogModel
         .create({
             blogTitle: req.body.blogTitle1,
             blogText: req.body.blogText1
