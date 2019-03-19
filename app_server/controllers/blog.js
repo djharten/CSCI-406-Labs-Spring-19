@@ -1,23 +1,42 @@
+var request = require('request');
+var apiOptions = { server: 'http://http://18.235.2.183' };
+var path, requestOptions;
+
+
+
+
 /* GET blog page */
 module.exports.blogList = function(req, res) {
-    res.render('blog', {
+    path = '/api/blog';
+    requestOptions = {
+        url: apiOptions.server + path,
+        method: "GET",
+        json: {},
+        qs: {}
+    };
+    request(
+        requestOptions,
+        function(err, response, blogs) {
+            if(err){
+                console.log(err);
+            } else if(response.statusCode === 200){
+                console.log("Number of blogs found: " + blogs.length);
+                createBlogList(req, res, blogs);
+            } else {
+                console.log(response.statusCode);
+            }
+        }
+    );
+};
+
+var createBlogList = function(req, res, responseBody) {
+    res.render('blogList', {
         title: 'Blog List',
-        blogList: [{
-          blogTitle: 'My First Blog.',
-          blogText: 'I really hate blogging. Yet here we are, blogging away in the blogosphere. Which is a really stupid word.',
-          createdOn: '01-30-2019, 4:42PM'
-        }, {
-          blogTitle: 'My second blog.',
-          blogText: 'I still do not enjoy blogging. And this ad revenue is next to nothing. It\'s probably because I don\'t have any ads. Gotta synergize it' +
-                    ' to the cloud with the blockchain.',
-          createdOn: '02-15-2019, 1:27PM'
-	    }, {
-          blogTitle: 'My third blog.',
-          blogText: 'All work and no play make Dan a dull boy.',
-          createdOn: '02-21-2019, 11:41AM'
-	    }]
+        pageHeader: 'Blog List',
+        blogs: responseBody
     });
 };
+
 
 /* GET blog add page */
 module.exports.blogAdd = function(req, res) {
