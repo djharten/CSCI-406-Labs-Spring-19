@@ -1,5 +1,5 @@
 var request = require('request');
-var apiOptions = { server: 'http://http://18.235.2.183' };
+var apiOptions = { server: 'http://18.235.2.183' };
 var path, requestOptions;
 
 
@@ -7,7 +7,7 @@ var path, requestOptions;
 
 /* GET blog page */
 module.exports.blogList = function(req, res) {
-    path = '/app_api/blog';
+    path = '/api/blog';
     requestOptions = {
         url: apiOptions.server + path,
         method: "GET",
