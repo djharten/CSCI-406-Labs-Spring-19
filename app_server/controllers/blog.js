@@ -7,7 +7,7 @@ var path, requestOptions;
 
 /* GET blog page */
 module.exports.blogList = function(req, res) {
-    path = '/api/blog';
+    path = '/app_api/blog';
     requestOptions = {
         url: apiOptions.server + path,
         method: "GET",
