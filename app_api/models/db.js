@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
-var dbURI = 'mongodb://blogger:blogger@localhost:27017/blogs';
+var dbURI = 'mongodb://blogger:blogger@localhost:27017/blogger';
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function () {

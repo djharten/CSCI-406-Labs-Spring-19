@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d383cb0-a694-4d53-9f82-984a427e584a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_api/controllers/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/app_api/controllers/blog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_api/models/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/app_api/models/db.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/app_api/models/db.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+              <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -243,7 +242,7 @@
       <workItem from="1551293751653" duration="3526000" />
       <workItem from="1552238943683" duration="3418000" />
       <workItem from="1552329534138" duration="14404000" />
-      <workItem from="1552911902056" duration="7158000" />
+      <workItem from="1552911902056" duration="7757000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1551293977675</created>
@@ -378,11 +377,25 @@
       <option name="project" value="LOCAL" />
       <updated>1552923218285</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Updating index.js in app_api">
+      <created>1553033316096</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1553033316096</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Updating index.js in app_api">
+      <created>1553033497967</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1553033497967</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28506000" />
+    <option name="totallyTimeSpent" value="29105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="962" extended-state="6" />
@@ -525,7 +538,7 @@
     <entry file="file://$PROJECT_DIR$/app_api/models/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
         </state>
       </provider>
     </entry>
