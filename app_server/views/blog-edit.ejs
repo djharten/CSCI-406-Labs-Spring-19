@@ -10,17 +10,17 @@
     <% include ./partials/navbar %>
     <h1><%= title %></h1>
     <div class="card">
-        <form method="put" action="/blog/blog-edit/<%= blogInfo._id %>" style="padding: 20px;">
+        Hey look <%= blogInfo._id %>
+        <form method="post" action="/blog/blog-edit/<%= blogInfo._id %>" style="padding: 20px;">
             <div class="form-group">
                 <label for="blogTitle"  class="text-dark">
                     Blog Title
                 </label>
                 <input class="form-control"  id="blogTitle" name="blogTitle" value="<%= blogInfo.blogTitle %>">
-
                 <label for="blogText" class="text-dark" style="width: 100%;">
                     Blog Text
                 </label>
-                <input class="form-control" id="blogText" name="blogText" value="<%= blogInfo.blogText %>"></textarea>
+                <input class="form-control" rows="6" id="blogText" name="blogText" value="<%= blogInfo.blogText %>"></textarea>
             </div>
             <input type="submit" class="btn btn-dark" value="Save">
         </form>
