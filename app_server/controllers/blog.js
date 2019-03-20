@@ -1,14 +1,13 @@
 var request = require('request');
 var apiOptions = { server: 'http://18.235.2.183' };
-var path = '/api/blog';
-var requestOptions;
+var path, requestOptions;
 
 
 
 
 /* GET: Lists all blog pages */
 module.exports.blogList = function(req, res) {
-    path += req.params.id;
+    path = "/api/blog";
     requestOptions = {
         url: apiOptions.server + path,
         method: "GET",
@@ -42,7 +41,7 @@ var createBlogList = function(req, res, responseBody) {
 
 /* GET: Gets single blog page, editable */
 module.exports.blogReadOne = function(req, res) {
-    path += req.params.id;
+    path =  "/api/blog" + req.params.id;
     requestOptions = {
         url : apiOptions.server + path,
         method : "GET",
@@ -51,7 +50,12 @@ module.exports.blogReadOne = function(req, res) {
     request(
         requestOptions,
         function(err, response, blogs) {
-            createBlogEdit(req, res, blogs);
+            if(err){
+                console.log(err);
+            } else {
+                console.log(response.statusCode);
+                createBlogEdit(req, res, blogs);
+            }
         }
     );
 };
@@ -73,8 +77,7 @@ var createBlogEdit = function(req, res, blogInfo) {
 /* Blog Edit */
 module.exports.blogEdit = function(req, res) {
     var postData;
-    var id = req.params.id;
-    path += id;
+    path = "/api/blog" + req.params.blogid;
     postData = {
         blogTitle : req.body.blogTitle,
         blogText : req.body.blogText
@@ -104,4 +107,23 @@ module.exports.blogAdd = function(req, res) {
 /* GET blog delete page */
 module.exports.blogDelete = function(req, res) {
     res.render('blog-delete', { title: 'Delete Your Blog' });
+};
+
+var _showError = function(req, res, status) {
+    var title, content;
+    if(status === 404) {
+        title = "404, Page Not Found";
+        content = "Sorry! Looks like your page cannot be found! (-_-)";
+    }else if (status === 500) {
+        title = "500, Internal Server Error";
+        content = "Wow, our bad, there is a problem with our server.";
+    } else {
+        title = status + ", Something's Gone Wrong!";
+        content = "Something has happened, Sorry!";
+    }
+    res.status(status);
+    res.render('errorPage', {
+        title : title,
+        content : content
+    });
 };
