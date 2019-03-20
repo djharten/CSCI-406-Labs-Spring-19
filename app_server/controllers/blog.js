@@ -1,13 +1,14 @@
 var request = require('request');
 var apiOptions = { server: 'http://18.235.2.183' };
-var path, requestOptions;
+var path = '/api/blog';
+var requestOptions;
 
 
 
 
-/* GET blog page */
+/* GET: Lists all blog pages */
 module.exports.blogList = function(req, res) {
-    path = '/api/blog';
+    path += req.params.id;
     requestOptions = {
         url: apiOptions.server + path,
         method: "GET",
@@ -29,6 +30,7 @@ module.exports.blogList = function(req, res) {
     );
 };
 
+/* Creates the list of blogs from the database, prepping it to be printed to the web page */
 var createBlogList = function(req, res, responseBody) {
     res.render('blog', {
         title: 'Blog List',
@@ -37,6 +39,62 @@ var createBlogList = function(req, res, responseBody) {
     });
 };
 
+
+/* GET: Gets single blog page, editable */
+module.exports.blogReadOne = function(req, res) {
+    path += req.params.id;
+    requestOptions = {
+        url : apiOptions.server + path,
+        method : "GET",
+        json: {}
+    };
+    request(
+        requestOptions,
+        function(err, response, blogs) {
+            createBlogEdit(req, res, blogs);
+        }
+    );
+};
+
+/* Renders the page to be edited */
+var createBlogEdit = function(req, res, blogInfo) {
+    res.render('blog-edit' , {
+        title: 'Edit Blog',
+        pageHeader: {
+            title: 'Edit Blog'
+        },
+        blogInfo : blogInfo,
+        blogid : blogInfo._id,
+        blogTitle : blogInfo.blogTitle,
+        blogText : blogInfo.blogText
+    });
+};
+
+/* Blog Edit */
+module.export.blogEdit = function(req, res) {
+    var postData;
+    var id = req.params.id;
+    path += id;
+    postData = {
+        blogTitle : req.body.blogTitle,
+        blogText : req.body.blogText
+    };
+    requestOptions = {
+        url : apiOptions.server + path,
+        method: "PUT",
+        json : postData
+    };
+    request (
+        requestOptions,
+        function(err, response, blog) {
+            if(response.statusCode === 200) {
+                res.redirect('/blog');
+            } else {
+                _showError(req, res, response.statusCode);
+            }
+        }
+    );
+};
 
 /* GET blog add page */
 module.exports.blogAdd = function(req, res) {
