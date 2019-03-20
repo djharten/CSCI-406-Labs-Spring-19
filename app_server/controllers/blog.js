@@ -33,7 +33,7 @@ var createBlogList = function(req, res, responseBody) {
     res.render('blog', {
         title: 'Blog List',
         pageHeader: 'Blog List',
-        blogs: responseBody
+        blogList: responseBody
     });
 };
 
