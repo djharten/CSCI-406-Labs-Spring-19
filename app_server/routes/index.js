@@ -8,11 +8,12 @@ router.get('/', ctrlIndex.home);
 
 /* GET blog pages */
 router.get('/blog', ctrlBlog.blogList);
-router.get('/blog/blog-add', ctrlBlog.blogAdd);
-router.get('/blog/blog-delete', ctrlBlog.blogDelete);
-router.get('/blog/blog-edit/:blogid', ctrlBlog.blogReadOne);
-router.put('/blog/blog-edit/:blogid', ctrlBlog.blogEditOne);
-
+router.get('/blogadd', ctrlBlog.blogAdd);
+router.post('/blogadd', ctrlBlog.addBlog);
+router.get('/blogedit/:blogid', ctrlBlog.blogReadOne); // this is readOne
+router.post('/blogedit/:blogid', ctrlBlog.blogEditOne); // this is editPost
+router.get('/blogdelete/:blogid', ctrlBlog.blogDelete); // this is del
+router.post('/blogdelete/:blogid', ctrlBlog.deletePost);
 
 
 module.exports = router;

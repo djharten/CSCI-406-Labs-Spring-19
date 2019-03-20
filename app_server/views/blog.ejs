@@ -17,8 +17,8 @@
                 <p class="card-text"><%= blog.blogText %> and <%= blog.blogid %> </p>
                 <p class="card-footer">
                   <%= blog.createdOn %>
-                  <a href="/blog/blog-edit/<%= blog.blogid %>" class="btn btn-warning float-right" role="button">Edit Blog</a>
-                  <a href="/blog/blog-delete" class="btn btn-danger float-right" role="button">Delete Blog</a>
+                  <a href="/blogedit/<%= blog.blogid %>" class="btn btn-warning float-right" role="button">Edit Blog</a>
+                  <a href="/blogdelete" class="btn btn-danger float-right" role="button">Delete Blog</a>
                 </p>
               </div>
             </div>

@@ -9,22 +9,19 @@
 <div class="container">
     <% include ./partials/navbar %>
     <h1><%= title %></h1>
-    <div class="card">
-        Hey look <%= blogInfo._id %>
-        <form method="post" action="/blog/blog-edit/<%= blogInfo._id %>" style="padding: 20px;">
-            <div class="form-group">
-                <label for="blogTitle"  class="text-dark">
-                    Blog Title
-                </label>
-                <input class="form-control"  id="blogTitle" name="blogTitle" value="<%= blogInfo.blogTitle %>">
-                <label for="blogText" class="text-dark" style="width: 100%;">
-                    Blog Text
-                </label>
-                <input class="form-control" rows="6" id="blogText" name="blogText" value="<%= blogInfo.blogText %>"></textarea>
+    <form action="/blog" method="POST">
+        <div class="form-group">
+            <label for="example-text-input" class="col-2 col-form-label">Blog Title</label>
+            <div class="col-10">
+                <input class="form-control" type="text" value="Blog Title" id="example-text-input">
             </div>
-            <input type="submit" class="btn btn-dark" value="Save">
-        </form>
-    </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleTextarea">Blog Text</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

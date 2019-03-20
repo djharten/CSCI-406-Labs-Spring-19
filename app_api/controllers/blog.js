@@ -1,6 +1,4 @@
 var mongoose = require('mongoose');
-// NOTE: name in model is what we named blog.js in the "models"
-// directory  at the mongoose.model call at the bottom of the file
 var blogModel = mongoose.model('Blog');
 
 var sendJsonResponse = function(res, status, content) {
@@ -20,6 +18,7 @@ module.exports.blogReadOne = function(req, res) {
                     });
                     return;
                 } else if(err) {
+                    console.log(err);
                     sendJsonResponse(res, 404, err);
                     return;
                 }
