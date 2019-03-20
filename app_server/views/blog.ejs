@@ -14,10 +14,10 @@
             <div class="card text-white bg-primary mb-3">
               <div class="card-header"><h5><%= blog.blogTitle %></h5></div>
               <div class="card-body">
-                <p class="card-text"><%= blog.blogText %> and <%= blog._id %> </p>
+                <p class="card-text"><%= blog.blogText %> and <%= blog.blogid %> </p>
                 <p class="card-footer">
                   <%= blog.createdOn %>
-                  <a href="/blog/blog-edit/<%= blog._id %>" class="btn btn-warning float-right" role="button">Edit Blog</a>
+                  <a href="/blog/blog-edit/<%= blog.blogid %>" class="btn btn-warning float-right" role="button">Edit Blog</a>
                   <a href="/blog/blog-delete" class="btn btn-danger float-right" role="button">Delete Blog</a>
                 </p>
               </div>

@@ -39,7 +39,8 @@ var buildBlogList = function(req, res, results) {
         blogs.push({
             blogTitle: obj.blogTitle,
             blogText: obj.blogText,
-            createdOn: obj.createdOn
+            createdOn: obj.createdOn,
+            blogid: obj._id
         });
     });
     return blogs;
