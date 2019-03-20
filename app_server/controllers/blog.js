@@ -64,9 +64,6 @@ module.exports.blogReadOne = function(req, res) {
 var createBlogEdit = function(req, res, blogInfo) {
     res.render('blog-edit' , {
         title: 'Edit Blog',
-        pageHeader: {
-            title: 'Edit Blog'
-        },
         blogInfo : blogInfo,
         blogid : blogInfo._id,
         blogTitle : blogInfo.blogTitle,
@@ -90,7 +87,7 @@ module.exports.blogEditOne = function(req, res) {
     request (
         requestOptions,
         function(err, response, blog) {
-            if(response.statusCode === 200) {
+            if(response.statusCode === 201) {
                 res.redirect('/blog');
             } else {
                 _showError(req, res, response.statusCode);

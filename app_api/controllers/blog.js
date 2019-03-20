@@ -89,8 +89,7 @@ module.exports.blogEditOne = function(req, res) {
     blogModel
         .findOneAndUpdate(
             { _id: req.params.id },
-            { $set: {"blogTitle" : req.body.blogTitle }},
-            { $set: {"blogText" : req.body.blogText }},
+            { $set: { "blogTitle" : req.body.blogTitle ,"blogText" : req.body.blogText } },
             function(err, blogger) {
                 if(err) {
                     sendJsonResponse(res, 400, err);
