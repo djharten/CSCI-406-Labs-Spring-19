@@ -62,7 +62,7 @@ module.exports.blogReadOne = function(req, res) {
 
 /* Renders the page to be edited */
 var createBlogEdit = function(req, res, blogInfo) {
-    res.render('blog/blog-edit' , {
+    res.render('blog-edit' , {
         title: 'Edit Blog',
         blogInfo : blogInfo,
         blogid : blogInfo._id,
