@@ -62,7 +62,7 @@ module.exports.blogReadOne = function(req, res) {
 
 /* Renders the page to be edited */
 var createBlogEdit = function(req, res, blogInfo) {
-    res.render('blog-edit' , {
+    res.render('blogedit' , {
         title: 'Edit Blog',
         blogInfo : blogInfo,
         blogid : blogInfo._id,
@@ -98,21 +98,21 @@ module.exports.blogEditOne = function(req, res) {
 
 /* GET blog add page */
 module.exports.blogAdd = function(req, res) {
-    res.render('blog-add', { title: 'Blog Add' });
+    res.render('blogadd', { title: 'Blog Add' });
 };
 
 module.exports.addBlog = function(req, res) {
-    res.render('blog-add', { title: 'Blog Add' });
+    res.render('blogadd', { title: 'Blog Add' });
 };
 
 /* GET blog delete page */
 module.exports.blogDelete = function(req, res) {
-    res.render('blog-delete', { title: 'Delete Your Blog' });
+    res.render('blogdelete', { title: 'Delete Your Blog' });
 };
 
 /* GET blog delete page */
 module.exports.deletePost = function(req, res) {
-    res.render('blog-delete', { title: 'Delete Your Blog' });
+    res.render('blogdelete', { title: 'Delete Your Blog' });
 };
 
 var _showError = function(req, res, status) {
