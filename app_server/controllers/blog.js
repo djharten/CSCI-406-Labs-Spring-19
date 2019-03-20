@@ -71,7 +71,7 @@ var createBlogEdit = function(req, res, blogInfo) {
 };
 
 /* Blog Edit */
-module.export.blogEdit = function(req, res) {
+module.exports.blogEdit = function(req, res) {
     var postData;
     var id = req.params.id;
     path += id;
@@ -99,11 +99,6 @@ module.export.blogEdit = function(req, res) {
 /* GET blog add page */
 module.exports.blogAdd = function(req, res) {
     res.render('blog-add', { title: 'Blog Add' });
-};
-
-/* GET blog edit page */
-module.exports.blogEdit = function(req, res) {
-    res.render('blog-edit', { title: 'Edit Your Blog' });
 };
 
 /* GET blog delete page */
