@@ -101,8 +101,17 @@ module.exports.blogAdd = function(req, res) {
     res.render('blog-add', { title: 'Blog Add' });
 };
 
+module.exports.addBlog = function(req, res) {
+    res.render('blog-add', { title: 'Blog Add' });
+};
+
 /* GET blog delete page */
 module.exports.blogDelete = function(req, res) {
+    res.render('blog-delete', { title: 'Delete Your Blog' });
+};
+
+/* GET blog delete page */
+module.exports.deletePost = function(req, res) {
     res.render('blog-delete', { title: 'Delete Your Blog' });
 };
 
