@@ -77,7 +77,7 @@ var createBlogEdit = function(req, res, blogInfo) {
 /* Blog Edit */
 module.exports.blogEditOne = function(req, res) {
     var postData;
-    path = "/api/blog" + req.params.blogid;
+    path = "/api/blog/" + req.params.blogid;
     postData = {
         blogTitle : req.body.blogTitle,
         blogText : req.body.blogText

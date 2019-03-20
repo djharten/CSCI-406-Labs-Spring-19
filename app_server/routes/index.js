@@ -11,7 +11,7 @@ router.get('/blog', ctrlBlog.blogList);
 router.get('/blog/blog-add', ctrlBlog.blogAdd);
 router.get('/blog/blog-delete', ctrlBlog.blogDelete);
 router.get('/blog/blog-edit/:blogid', ctrlBlog.blogReadOne);
-router.put('/blog/blog-edit/:blogid', ctrlBlog.blogEdit);
+router.put('/blog/blog-edit/:blogid', ctrlBlog.blogEditOne);
 
 
 
