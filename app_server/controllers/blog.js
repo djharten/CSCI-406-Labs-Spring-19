@@ -122,7 +122,7 @@ var _showError = function(req, res, status) {
         content = "Something has happened, Sorry!";
     }
     res.status(status);
-    res.render('errorPage', {
+    res.render('error', {
         title : title,
         content : content
     });
