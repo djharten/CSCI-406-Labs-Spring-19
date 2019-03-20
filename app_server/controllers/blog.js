@@ -41,7 +41,7 @@ var createBlogList = function(req, res, responseBody) {
 
 /* GET: Gets single blog page, editable */
 module.exports.blogReadOne = function(req, res) {
-    path =  "/api/blog" + req.params.id;
+    path =  "/api/blog/" + req.params.id;
     requestOptions = {
         url : apiOptions.server + path,
         method : "GET",
@@ -87,7 +87,7 @@ module.exports.blogEditOne = function(req, res) {
     request (
         requestOptions,
         function(err, response, blog) {
-            if(response.statusCode === 201) {
+            if(!err && response.statusCode === 201) {
                 res.redirect('/blog');
             } else {
                 _showError(req, res, response.statusCode);
