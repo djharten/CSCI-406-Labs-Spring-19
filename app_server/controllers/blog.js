@@ -30,7 +30,7 @@ module.exports.blogList = function(req, res) {
 };
 
 var createBlogList = function(req, res, responseBody) {
-    res.render('blogList', {
+    res.render('blog', {
         title: 'Blog List',
         pageHeader: 'Blog List',
         blogs: responseBody
