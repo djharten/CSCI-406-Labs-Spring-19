@@ -134,7 +134,7 @@ module.exports.deleteOne = function(req, res) {
     request(
         requestOptions,
         function(err, response, blog) {
-            console.log(body);
+            console.log(blog);
             createDeletePage(req, res, blog);
 
         }
