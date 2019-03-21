@@ -9,16 +9,15 @@
 <div class="container">
     <% include ./partials/navbar %>
     <h1><%= title %></h1>
-    <form action="/blog" method="POST">
+    <form action="/blogadd" method="post">
         <div class="form-group">
-            <label for="example-text-input" class="col-2 col-form-label">Blog Title</label>
-            <div class="col-10">
-                <input class="form-control" type="text" value="Blog Title" id="example-text-input">
-            </div>
+            <label class="col-2 col-form-label">Blog Title</label>
+                <input class="form-control" type="text" value="Blog Title" name="blogTitle">
         </div>
         <div class="form-group">
-            <label for="exampleTextarea">Blog Text</label>
-            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            <label class="">Blog Text
+            <textarea class="col-2 col-form-label" name="blogText" rows="3" type="text"></textarea>
+            </label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
