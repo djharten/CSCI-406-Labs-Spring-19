@@ -10,9 +10,9 @@ router.get('/', ctrlIndex.home);
 router.get('/blog', ctrlBlog.blogList);
 router.get('/blogadd', ctrlBlog.blogAdd);
 router.post('/blogadd', ctrlBlog.addBlog);
-router.get('/blogedit/:blogid', ctrlBlog.blogReadOne); // this is readOne
-router.post('/blogedit/:blogid', ctrlBlog.blogEditOne); // this is editPost
-router.get('/blogdelete/:blogid', ctrlBlog.blogDelete); // this is del
+router.get('/blogedit/:blogid', ctrlBlog.readOne); // this is readOne
+router.post('/blogedit/:blogid', ctrlBlog.editOne); // this is editPost
+router.get('/blogdelete/:blogid', ctrlBlog.deleteOne); // this is del
 router.post('/blogdelete/:blogid', ctrlBlog.deletePost);
 
 
