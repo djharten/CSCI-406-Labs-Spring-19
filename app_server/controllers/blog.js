@@ -2,9 +2,6 @@ var request = require('request');
 var apiOptions = { server: 'http://18.235.2.183' };
 var path, requestOptions;
 
-
-
-
 /* GET: Lists all blog pages */
 module.exports.blogList = function(req, res) {
     path = "/api/blog";
@@ -40,7 +37,7 @@ var createBlogList = function(req, res, responseBody) {
 
 
 /* GET: Gets single blog page, editable */
-module.exports.blogReadOne = function(req, res) {
+module.exports.readOne = function(req, res) {
     path =  "/api/blog/" + req.params.id;
     requestOptions = {
         url : apiOptions.server + path,
@@ -72,7 +69,7 @@ var createBlogEdit = function(req, res, blogInfo) {
 };
 
 /* Blog Edit */
-module.exports.blogEditOne = function(req, res) {
+module.exports.editOne = function(req, res) {
     var postData;
     path = "/api/blog/" + req.params.blogid;
     postData = {
@@ -98,21 +95,80 @@ module.exports.blogEditOne = function(req, res) {
 
 /* GET blog add page */
 module.exports.blogAdd = function(req, res) {
-    res.render('blogadd', { title: 'Blog Add' });
+    res.render('blogadd', { title: 'Blog Add Page' });
 };
 
 module.exports.addBlog = function(req, res) {
-    res.render('blogadd', { title: 'Blog Add' });
+    var postData;
+    path = '/api/blog';
+    postData = {
+        blogTitle: req.body.blogTitle,
+        blogText: req.body.blogText,
+        createdOn: Date.now()
+    };
+    requestOptions = {
+        url : apiOptions.server + path,
+        method : "POST",
+        json : postData
+    };
+    request(
+        requestOptions,
+        function(err, response, blog) {
+            if(response.statusCode === 201) {
+                res.redirect('/blog');
+            } else {
+                _showError(req, res, response.statusCode);
+            }
+        }
+    );
 };
 
 /* GET blog delete page */
-module.exports.blogDelete = function(req, res) {
-    res.render('blogdelete', { title: 'Delete Your Blog' });
+module.exports.deleteOne = function(req, res) {
+    path = '/api/blog/' + req.params.blogid;
+    requestOptions = {
+        url : apiOptions.server + path,
+        method : "GET",
+        json : {}
+    };
+    request(
+        requestOptions,
+        function(err, response, blog) {
+            console.log(body);
+            createDeletePage(req, res, blog);
+
+        }
+    );
+};
+
+var createDeletePage = function(req, res, blogInfo) {
+    res.render('blogdelete', {
+        title : 'Delete Blog Page',
+        blogData: blogInfo,
+        blogid: blogInfo._id,
+        blogText: blogInfo.blogText,
+        blogTitle: blogInfo.blogTitle
+    });
 };
 
 /* GET blog delete page */
 module.exports.deletePost = function(req, res) {
-    res.render('blogdelete', { title: 'Delete Your Blog' });
+    path = '/api/blog/' + req.params.blogid;
+    requestOptions = {
+        url : apiOptions.server + path,
+        method : "DELETE",
+        json : {}
+    };
+    request(
+        requestOptions,
+        function(err, response, blog) {
+            if(response.statusCode === 204) {
+                res.redirect('/blog');
+            } else {
+                _showError(req, res, response.statusCode);
+            }
+        }
+    );
 };
 
 var _showError = function(req, res, status) {
