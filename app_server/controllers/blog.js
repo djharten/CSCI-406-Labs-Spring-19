@@ -38,7 +38,7 @@ var createBlogList = function(req, res, responseBody) {
 
 /* GET: Gets single blog page, editable */
 module.exports.readOne = function(req, res) {
-    path =  "/api/blog/" + req.params.id;
+    path =  "/api/blog/" + req.params.blogid;
     requestOptions = {
         url : apiOptions.server + path,
         method : "GET",
@@ -61,10 +61,10 @@ module.exports.readOne = function(req, res) {
 var createBlogEdit = function(req, res, blogInfo) {
     res.render('blogedit' , {
         title: 'Edit Blog',
-        blogInfo : blogInfo,
-        blogid : blogInfo._id,
-        blogTitle : blogInfo.blogTitle,
-        blogText : blogInfo.blogText
+        blogInfo: blogInfo,
+        blogid: blogInfo._id,
+        blogText: blogInfo.blogText,
+        blogTitle: blogInfo.blogTitle
     });
 };
 
