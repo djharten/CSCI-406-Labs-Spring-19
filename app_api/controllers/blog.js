@@ -87,7 +87,7 @@ module.exports.addOne = function(req, res) {
 };
 
 module.exports.editOne = function(req, res) {
-    console.log("Updating blog with id: " + req.params.id);
+    console.log("Updating blog with id: " + req.params.blogid);
     console.log(req.body);
     blogModel
         .findOneAndUpdate(
