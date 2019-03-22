@@ -91,7 +91,7 @@ module.exports.editOne = function(req, res) {
     console.log(req.body);
     blogModel
         .findOneAndUpdate(
-            { _id: req.params.id },
+            { _id: req.params.blogid },
             { $set: { "blogTitle" : req.body.blogTitle ,"blogText" : req.body.blogText } },
             function(err, blogger) {
                 if(err) {
