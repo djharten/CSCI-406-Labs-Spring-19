@@ -144,7 +144,7 @@ module.exports.deleteOne = function(req, res) {
 var createDeletePage = function(req, res, blogInfo) {
     res.render('blogdelete', {
         title : 'Delete Blog Page',
-        blogData: blogInfo,
+        blogInfo: blogInfo,
         blogid: blogInfo._id,
         blogText: blogInfo.blogText,
         blogTitle: blogInfo.blogTitle
