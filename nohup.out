@@ -28,3 +28,49 @@ npm ERR! This is probably not a problem with npm. There is likely additional log
 
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /home/bitnami/.npm/_logs/2019-02-15T02_51_00_219Z-debug.log
+
+> blogger@0.0.0 start /home/bitnami/blogger3
+> node ./bin/www
+
+Mongoose connected to mongodb://blogs:blogs@localhost:27017/blogger
+[0mGET / [36m304 [0m819.027 ms - -[0m
+[0mGET /public/stylesheets/style.css [33m404 [0m2.501 ms - 1646[0m
+[0mGET /favicon.ico [0m- [0m- ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: 'Here\'s a new blog.',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m1719.423 ms - 292[0m
+Number of blogs found: 2
+[0mGET /blog [36m304 [0m2542.701 ms - -[0m
+[0mGET /stylesheets/style.css [32m200 [0m81.245 ms - 110[0m
+[0mGET /blogadd [36m304 [0m1.450 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.989 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: 'Here\'s a new blog.',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m240.619 ms - 292[0m
+Number of blogs found: 2
+[0mGET /blog [36m304 [0m246.278 ms - -[0m
+[0mGET /stylesheets/style.css [32m200 [0m0.704 ms - 110[0m
+[0mGET /favicon.ico [0m- [0m- ms - -[0m
+
+> blogger@0.0.0 start /home/bitnami/blogger3
+> node ./bin/www
+
+Mongoose connected to mongodb://blogs:blogs@localhost:27017/blogger
