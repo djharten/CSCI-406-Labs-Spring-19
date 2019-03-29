@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/blog-style.css">
+  <link rel="icon" href="/images/dan-logo.png" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<% include ./partials/navbar %>
+<div class="container nav-box">
+  <h1><%= title %></h1>
+  <% blogList.forEach(function(blog) { %>
+    <div class="blog-box">
+      <div class="card text-black mb-3">
+        <div class="card-header"><h5><%= blog.blogTitle %></h5></div>
+        <div class="card-body">
+          <p class="card-text"><%= blog.blogText %> </p>
+          <p class="card-footer">
+            <%= blog.createdOn %>
+            <a href="/blogedit/<%= blog.blogid %>" class="btn btn-warning float-right" role="button">Edit Blog</a>
+            <a href="/blogdelete/<%= blog.blogid %>" class="btn btn-danger float-right" role="button">Delete Blog</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% }); %>
+</div>
+</body>
+</html>

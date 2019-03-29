@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-box {
+  width: 80%;
+  background: white;
+  margin-top: -55px;
+  padding: 2px;
+  border-radius: 8px;
+}
+
+.tab-content img {
+  width: 100%;
+}
+
+.topleft {
+  position: absolute;
+  top: 5px;
+}
+
+.topleft img {
+  width: 90px;
+  height: 60px;
+}
+
+.nav-pills .transfer .nav-link {
+  background-color: #d9534f;
+  color: white;
+}
+
+.banner {
+  height: 150px;
+  width: 100%
+  margin: auto;
+  overflow: hidden;
+  background-color: #002E73;
+}
+
+ .spacing {
+  margin-top: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.navbar {
+  font-size: 16pt;
+  color: #FFFFFF;
+  padding-left: 175px;
+  padding-top: 20px;
+}
+
+.navbar-nav > li{
+  padding-right:50px;
+}
+
+.navbar-color {
+  color: #FFFFFF;
+}
+
+.navbar-right {
+  padding-right: 185px;
+  font-size: 14pt;
+}
+
+#drag-div {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#drag-div img {
+  width: 260px;
+  height: 520px;
+}
