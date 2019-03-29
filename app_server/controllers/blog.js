@@ -1,5 +1,5 @@
 var request = require('request');
-var apiOptions = { server: 'http://localhost:3000' };
+var apiOptions = { server: 'http://18.208.205.232' };
 var path, requestOptions;
 
 /* GET: Lists all blog pages */
