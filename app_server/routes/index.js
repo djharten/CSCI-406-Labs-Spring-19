@@ -4,7 +4,7 @@ var ctrlIndex = require('../controllers/home');
 var ctrlBlog = require('../controllers/blog');
 
 /* GET home page */
-router.get('/', ctrlIndex.home);
+router.get('/', ctrlIndex.homeList);
 
 /* GET blog pages */
 router.get('/blog', ctrlBlog.blogList);
