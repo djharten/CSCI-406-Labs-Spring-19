@@ -61,30 +61,71 @@
         </div>
     </script> <!-- End blog list page -->
 
+
     <!-- blog add page -->
     <script type="text/ng-template" id="pages/blogadd.html">
         <div class="container nav-box">
-            <h1> {{ vm.title }} </h1>
+            <h1> {{ vm.pageHeader }} </h1>
             <div class="blog-text-container">
                 <form name="userForm" ng-Controller="addController" ng-submit="vm.onSubmit()">
-                <div class="form-group">
-                    <label class="col-2 col-form-label">Blog Title</label>
-                     <input class="form-control" type="text" placeholder="Blog Title" name="blogTitle">
-                </div>
-                <div class="form-group">
-                    <label class="col-2 col-form-label">Blog Text</label>
-                    <textarea class="form-control" name="blogText" rows="10" type="text"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Title</label>
+                        <input class="form-control" type="text" placeholder="Blog Title" name="blogTitle">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Text</label>
+                        <textarea class="form-control" name="blogText" rows="10" type="text"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
-    </script> <!-- end blog add page -->
+    </script>  <!-- end blog add page -->
 
+    <!-- blog delete page -->
+    <script type="text/ng-template" id="pages/blogdelete.html">
+        <div class="container nav-box">
+            <h1> {{ vm.pageHeader }} </h1>
+            <div class="blog-text-container">
+                <form name="userForm" ng-Controller="deleteController" ng-submit="vm.onSubmit()">
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Title</label>
+                        <input class="form-control" id="blogTitle" name="blogTitle" value="{{ vm.blog.blogTitle }}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Text</label>
+                        <textarea class="form-control" id="blogText" name="blogText" rows="10" readonly>{{ vm.blog.blogText }}</textarea>
+                        <br \>
+                        <input class="btn btn-danger" value="Delete Post" type="submit">
+                        <input type="submit" class="btn btn-primary" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script> <!-- end blog delete page -->
 
-<div>ng-view></div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- blog edit page -->
+    <script type="text/ng-template" id="pages/blogedit.html">
+        <div class="container nav-box">
+            <h1> {{ vm.pageHeader }} </h1>
+            <div class="blog-text-container">
+                <form name="userForm" ng-Controller="editController" ng-submit="vm.onSubmit()">
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Title</label>
+                        <input class="form-control" id="blogTitle" name="blogTitle" value="{{ vm.blog.blogTitle }}">
+                        <label class="col-2 col-form-label">Blog Text</label>
+                        <textarea class="form-control" id="blogText" rows="10" type="text">{{ vm.blog.blogText }}</textarea>
+                        <input type="submit" class="btn btn-primary" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script> <!-- end blog edit page -->
+
+    <div ng-view></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

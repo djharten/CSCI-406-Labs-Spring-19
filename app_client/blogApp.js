@@ -1,15 +1,5 @@
 var app = angular.module('blogApp' , ['ngRoute']);
 
-/*
-var myController = function($scope) {
-    $scope.myInput = "Worlddddd";
-};
-
-angular
-    .module('blogApp')
-    .controller('myController', myController);
-*/
-
 // Router Provider
 app.config(function($routeProvider) {
     $routeProvider
@@ -31,7 +21,7 @@ app.config(function($routeProvider) {
             controllerAs: 'vm'
         })
 
-        .when('/blogdelete:blogid', {
+        .when('/blogdelete/:blogid', {
             templateUrl: 'pages/blogdelete.html',
             controller: 'deleteController',
             controllerAs: 'vm'
@@ -81,9 +71,9 @@ app.controller('addController', [ '$http', '$location', function addController($
     vm.onSubmit = function() {
         var blogData = vm.blog;
         blogData.blogTitle = userForm.blogTitle.value;
-        blogData.blogText = userForm.blogTitle.value;
+        blogData.blogText = userForm.blogText.value;
 
-        addOneBlog($http, data)
+        addOneBlog($http, blogData)
             .success(function(blogData) {
                 console.log(blogData);
                 $location.path('/blog').replace();
@@ -94,16 +84,85 @@ app.controller('addController', [ '$http', '$location', function addController($
     };
 }]);
 
+app.controller('deleteController', [ '$http', '$routeParams', '$location', function deleteController($http, $routeParams, $location) {
+    var vm = this;
+    vm.blog = {};
+    vm.title = allTitle;
+    vm.pageHeader = "Delete a Blog entry";
+    vm.id = $routeParams.blogid;
+
+    readOneBlog($http, vm.id)
+        .success(function(blogData) {
+            vm.blog = blogData;
+            vm.message = "Confirm Deletion";
+        })
+        .error(function(e) {
+            vm.message = vm.id + " not found.";
+        })
+
+    vm.onSubmit = function() {
+        var blogData = vm.blog;
+
+        deleteOneBlog($http, vm.id)
+            .success(function(blogData) {
+                vm.message = "Blog successfully deleted";
+                $location.path('/blog').replace();
+            })
+            .error(function(e) {
+                vm.message = vm.id + " not found.";
+            });
+    }
+}]);
+
+app.controller('editController', [ '$http', '$routeParams', '$location', function editController($http, $routeParams, $location) {
+    var vm = this;
+    vm.title = allTitle;
+    vm.pageHeader = "Edit a Blog entry";
+    vm.blog = {};
+    vm.id = $routeParams.blogid;
+
+    readOneBlog($http, vm.id)
+        .success(function(blogData) {
+            vm.blog = blogData;
+        })
+        .error(function(e) {
+            vm.message = vm.id + " not found.";
+        })
+
+    vm.onSubmit = function() {
+        var blogData = {};
+        blogData.blogTitle = userForm.blogTitle.value;
+        blogData.blogText = userForm.blogText.value;
+
+        editOneBlog($http, blogData, vm.id)
+            .success(function(blogData) {
+                vm.message = "Blog successfuly updated";
+                $location.path('/blog').replace();
+            })
+            .error(function(e) {
+                vm.message = vm.id + " not found.";
+            });
+    }
+}]);
 
 
+// function calls
 function listOfBlogs($http) {
     return $http.get('/api/blog');
 }
 
-function addOneBlog($http, data) {
-    return $http.post('/api/blog', data);
+function addOneBlog($http, blogData) {
+    return $http.post('/api/blog', blogData);
 }
 
-/* GET home page
-router.get('/', ctrlIndex.homeList);
-*/
+function deleteOneBlog($http, blogid) {
+    return $http.delete('/api/blog/' + blogid);
+}
+
+function readOneBlog($http, blogid) {
+    return $http.get('/api/blog/' + blogid);
+}
+
+function editOneBlog($http, blogData, blogid) {
+    return $http.put('/api/blog/' + blogid , blogData);
+}

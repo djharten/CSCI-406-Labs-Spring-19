@@ -6,13 +6,13 @@ var logger = require('morgan');
 
 require('./app_api/models/db');
 
-var routes = require('./app_server/routes/index');
+//var routes = require('./app_server/routes/index');
 var routesApi = require('./app_api/routes/index');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'app_server' , 'views'));
+//app.set('views', path.join(__dirname, 'app_server' , 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
