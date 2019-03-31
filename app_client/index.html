@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="blogApp">
 <head>
+    <title>Dan Hartenstine's Blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -52,10 +53,11 @@
                         <p class="card-text"> {{ blog.blogText }} </p>
                         <p class="card-footer">
                             {{ blog.createdOn }}
-                            <a href="#/blogedit/{{ blog.blogid }}" class="btn btn-warning float-right" role="button">Edit Blog</a>
-                            <a href="#/blogdelete/{{ blog.blogid }}" class="btn btn-danger float-right" role="button">Delete Blog</a>
+                            <a href="#/blogedit/{{ blog.blogid }}" role="button"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a href="#/blogdelete/{{ blog.blogid }}" role="button"><span class="glyphicon glyphicon-remove"></span></a>
                         </p>
                     </div>
+                    <hr>
                 </div>
             </div>
         </div>

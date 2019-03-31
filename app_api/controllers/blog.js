@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var moment = require('moment');
 var blogModel = mongoose.model('Blog');
 
 var sendJsonResponse = function(res, status, content) {
@@ -29,10 +30,13 @@ module.exports.blogList = function(req, res) {
 var buildBlogList = function(req, res, results) {
     var blogs = [];
     results.forEach(function (obj) {
+
+        var date = moment(obj.createdOn).format('MM-DD-YYYY, LT');
+
         blogs.push({
             blogTitle: obj.blogTitle,
             blogText: obj.blogText,
-            createdOn: obj.createdOn,
+            createdOn: date,
             blogid: obj._id
         });
     });
