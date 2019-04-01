@@ -1,0 +1,104 @@
+
+> blogger@0.0.0 start /home/bitnami/blogger4
+> node ./bin/www
+
+Mongoose connected to mongodb://blogs:blogs@localhost:27017/blogger
+[0mGET / [32m200 [0m6.670 ms - 6498[0m
+[0mGET /lib/angular-route.min.js [32m200 [0m1.274 ms - 3884[0m
+[0mGET /blogApp.js [32m200 [0m1.403 ms - 4843[0m
+[0mGET /lib/angular-ui-router.min.js [32m200 [0m1.503 ms - 19546[0m
+[0mGET /stylesheets/blog-style.css [32m200 [0m1.331 ms - 1561[0m
+[0mGET /images/dan-logo.png [36m304 [0m0.648 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m24.103 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m4.813 ms - -[0m
+[0mGET / [32m200 [0m1.011 ms - 6498[0m
+[0mGET /stylesheets/blog-style.css [32m200 [0m0.704 ms - 1561[0m
+[0mGET /lib/angular-route.min.js [32m200 [0m0.531 ms - 3884[0m
+[0mGET /lib/angular-ui-router.min.js [32m200 [0m0.416 ms - 19546[0m
+[0mGET /blogApp.js [32m200 [0m0.389 ms - 4843[0m
+[0mGET /images/dan-logo.png [32m200 [0m0.895 ms - 6571[0m
+[0mGET /images/dan-logo.png [32m200 [0m0.377 ms - 6571[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m3.722 ms - 260[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.571 ms - -[0m
+{ blogTitle: 'ff', blogText: 'ffff' }
+{ createdOn: 2019-04-01T15:26:06.581Z,
+  _id: 5ca22dc70ef9b633185e8fa4,
+  blogTitle: 'ff',
+  blogText: 'ffff',
+  __v: 0 }
+[0mPOST /api/blog [32m201 [0m28.464 ms - 116[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-04-01T15:26:06.581Z,
+    _id: 5ca22dc70ef9b633185e8fa4,
+    blogTitle: 'ff',
+    blogText: 'ffff',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m2.258 ms - 367[0m
+Finding blog details { blogid: '5ca22dc70ef9b633185e8fa4' }
+{ createdOn: 2019-04-01T15:26:06.581Z,
+  _id: 5ca22dc70ef9b633185e8fa4,
+  blogTitle: 'ff',
+  blogText: 'ffff',
+  __v: 0 }
+[0mGET /api/blog/5ca22dc70ef9b633185e8fa4 [32m200 [0m11.619 ms - 116[0m
+Finding blog details { blogid: '5ca22dc70ef9b633185e8fa4' }
+{ createdOn: 2019-04-01T15:26:06.581Z,
+  _id: 5ca22dc70ef9b633185e8fa4,
+  blogTitle: 'ff',
+  blogText: 'ffff',
+  __v: 0 }
+[0mGET /api/blog/5ca22dc70ef9b633185e8fa4 [32m200 [0m5.115 ms - 116[0m
