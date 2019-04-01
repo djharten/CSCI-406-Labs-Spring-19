@@ -74,3 +74,1485 @@ Number of blogs found: 2
 > node ./bin/www
 
 Mongoose connected to mongodb://blogs:blogs@localhost:27017/blogger
+
+> blogger@0.0.0 start /home/bitnami/blogger4
+> node ./bin/www
+
+Mongoose connected to mongodb://blogs:blogs@localhost:27017/blogger
+[0mGET / [36m304 [0m5.175 ms - -[0m
+[0mGET /stylesheets/blog-style.css [32m200 [0m2.641 ms - 1561[0m
+[0mGET /lib/angular-route.min.js [32m200 [0m0.641 ms - 3884[0m
+[0mGET /lib/angular-ui-router.min.js [32m200 [0m0.828 ms - 19546[0m
+[0mGET /blogApp.js [32m200 [0m1.184 ms - 4843[0m
+[0mGET /images/dan-logo.png [32m200 [0m0.420 ms - 6571[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m24.314 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m5.851 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m4.299 ms - -[0m
+{ blogTitle: '', blogText: 'Final test' }
+{ ValidationError: Blog validation failed: blogTitle: Path `blogTitle` is required.
+    at ValidationError.inspect (/home/bitnami/blogger4/node_modules/mongoose/lib/error/validation.js:59:24)
+    at formatValue (util.js:400:38)
+    at inspect (util.js:294:10)
+    at format (util.js:161:12)
+    at Console.log (console.js:130:21)
+    at /home/bitnami/blogger4/app_api/controllers/blog.js:84:29
+    at /home/bitnami/blogger4/node_modules/mongoose/lib/model.js:4690:16
+    at /home/bitnami/blogger4/node_modules/mongoose/lib/utils.js:250:11
+    at parallel (/home/bitnami/blogger4/node_modules/mongoose/lib/model.js:2808:16)
+    at /home/bitnami/blogger4/node_modules/async/internal/parallel.js:39:9
+    at /home/bitnami/blogger4/node_modules/async/internal/once.js:12:16
+    at iteratorCallback (/home/bitnami/blogger4/node_modules/async/eachOf.js:60:13)
+    at /home/bitnami/blogger4/node_modules/async/internal/onlyOnce.js:12:16
+    at /home/bitnami/blogger4/node_modules/async/internal/parallel.js:36:13
+    at callbackWrapper (/home/bitnami/blogger4/node_modules/mongoose/lib/model.js:2781:20)
+    at /home/bitnami/blogger4/node_modules/mongoose/lib/model.js:4690:16
+  errors: 
+   { blogTitle: 
+      { ValidatorError: Path `blogTitle` is required.
+    at new ValidatorError (/home/bitnami/blogger4/node_modules/mongoose/lib/error/validator.js:29:11)
+    at validate (/home/bitnami/blogger4/node_modules/mongoose/lib/schematype.js:926:13)
+    at /home/bitnami/blogger4/node_modules/mongoose/lib/schematype.js:979:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/home/bitnami/blogger4/node_modules/mongoose/lib/schematype.js:935:19)
+    at /home/bitnami/blogger4/node_modules/mongoose/lib/document.js:1936:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `blogTitle` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'blogTitle',
+        value: '',
+        reason: undefined,
+        [Symbol(mongoose:validatorError)]: true } },
+  _message: 'Blog validation failed',
+  name: 'ValidationError' }
+[0mPOST /api/blog [33m400 [0m21.028 ms - 383[0m
+{ blogTitle: 'testttt', blogText: 'Final test' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca04cd26f326e1cc150996d,
+  blogTitle: 'testttt',
+  blogText: 'Final test',
+  __v: 0 }
+[0mPOST /api/blog [32m201 [0m6.773 ms - 127[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m2.752 ms - 1055[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m4.103 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.913 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.882 ms - -[0m
+[0mGET / [32m200 [0m0.888 ms - 6580[0m
+[0mGET /stylesheets/blog-style.css [32m200 [0m1.126 ms - 1561[0m
+[0mGET /lib/angular-route.min.js [32m200 [0m1.248 ms - 3884[0m
+[0mGET /lib/angular-ui-router.min.js [32m200 [0m0.715 ms - 19546[0m
+[0mGET /blogApp.js [32m200 [0m0.957 ms - 4843[0m
+[0mGET /images/dan-logo.png [32m200 [0m0.475 ms - 6571[0m
+[0mGET /images/dan-logo.png [32m200 [0m0.519 ms - 6571[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m3.545 ms - -[0m
+[0mGET / [32m200 [0m9.404 ms - 6580[0m
+[0mGET / [32m200 [0m1.598 ms - 6580[0m
+[0mGET / [32m200 [0m0.975 ms - 6580[0m
+[0mGET / [32m200 [0m0.558 ms - 6580[0m
+[0mGET / [32m200 [0m0.592 ms - 6580[0m
+[0mGET / [32m200 [0m0.501 ms - 6580[0m
+[0mGET /stylesheets/blog-style.css [32m200 [0m1.517 ms - 1561[0m
+[0mGET /lib/angular-route.min.js [32m200 [0m2.582 ms - 3884[0m
+[0mGET /lib/angular-ui-router.min.js [32m200 [0m2.608 ms - 19546[0m
+[0mGET /blogApp.js [32m200 [0m0.986 ms - 4843[0m
+[0mGET /images/dan-logo.png [32m200 [0m1.201 ms - 6571[0m
+[0mGET /images/dan-logo.png [36m304 [0m1.330 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m37.552 ms - 1055[0m
+Finding blog details { blogid: '5ca04cd26f326e1cc150996d' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca04cd26f326e1cc150996d,
+  blogTitle: 'testttt',
+  blogText: 'Final test',
+  __v: 0 }
+[0mGET /api/blog/5ca04cd26f326e1cc150996d [32m200 [0m13.853 ms - 127[0m
+Finding blog details { blogid: '5ca04cd26f326e1cc150996d' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca04cd26f326e1cc150996d,
+  blogTitle: 'testttt',
+  blogText: 'Final test',
+  __v: 0 }
+[0mGET /api/blog/5ca04cd26f326e1cc150996d [36m304 [0m2.049 ms - -[0m
+Updating blog with id: 5ca04cd26f326e1cc150996d
+{ blogTitle: 'testttt', blogText: 'Final test!!' }
+(node:7361) DeprecationWarning: collection.findAndModify is deprecated. Use findOneAndUpdate, findOneAndReplace or findOneAndDelete instead.
+[0mPUT /api/blog/5ca04cd26f326e1cc150996d [32m201 [0m146.905 ms - 127[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test!!',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m2.780 ms - 1057[0m
+{ blogTitle: 'Prof blog!', blogText: 'Testing, 1, 2, 3...' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca0ce616f326e1cc150996e,
+  blogTitle: 'Prof blog!',
+  blogText: 'Testing, 1, 2, 3...',
+  __v: 0 }
+[0mPOST /api/blog [32m201 [0m3.409 ms - 139[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test!!',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca0ce616f326e1cc150996e,
+    blogTitle: 'Prof blog!',
+    blogText: 'Testing, 1, 2, 3...',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m3.412 ms - 1187[0m
+Finding blog details { blogid: '5ca0ce616f326e1cc150996e' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca0ce616f326e1cc150996e,
+  blogTitle: 'Prof blog!',
+  blogText: 'Testing, 1, 2, 3...',
+  __v: 0 }
+[0mGET /api/blog/5ca0ce616f326e1cc150996e [32m200 [0m1.938 ms - 139[0m
+Finding blog details { blogid: '5ca0ce616f326e1cc150996e' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca0ce616f326e1cc150996e,
+  blogTitle: 'Prof blog!',
+  blogText: 'Testing, 1, 2, 3...',
+  __v: 0 }
+[0mGET /api/blog/5ca0ce616f326e1cc150996e [36m304 [0m1.538 ms - -[0m
+Deleting blog entry: 5ca0ce616f326e1cc150996e
+{}
+[0mDELETE /api/blog/5ca0ce616f326e1cc150996e [32m204 [0m2.270 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca04cd26f326e1cc150996d,
+    blogTitle: 'testttt',
+    blogText: 'Final test!!',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m2.485 ms - 1057[0m
+Finding blog details { blogid: '5ca04cd26f326e1cc150996d' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca04cd26f326e1cc150996d,
+  blogTitle: 'testttt',
+  blogText: 'Final test!!',
+  __v: 0 }
+[0mGET /api/blog/5ca04cd26f326e1cc150996d [32m200 [0m2.052 ms - 129[0m
+Finding blog details { blogid: '5ca04cd26f326e1cc150996d' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca04cd26f326e1cc150996d,
+  blogTitle: 'testttt',
+  blogText: 'Final test!!',
+  __v: 0 }
+[0mGET /api/blog/5ca04cd26f326e1cc150996d [36m304 [0m1.532 ms - -[0m
+Deleting blog entry: 5ca04cd26f326e1cc150996d
+{}
+[0mDELETE /api/blog/5ca04cd26f326e1cc150996d [32m204 [0m1.470 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m4.446 ms - 937[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.617 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.470 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m13.026 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET / [36m304 [0m0.369 ms - -[0m
+[0mGET /stylesheets/blog-style.css [36m304 [0m0.288 ms - -[0m
+[0mGET /lib/angular-route.min.js [36m304 [0m0.305 ms - -[0m
+[0mGET /lib/angular-ui-router.min.js [36m304 [0m0.318 ms - -[0m
+[0mGET /images/dan-logo.png [36m304 [0m0.265 ms - -[0m
+[0mGET /blogApp.js [36m304 [0m0.682 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-24T19:13:39.207Z,
+    _id: 5c97d70ae85a0e2369402b36,
+    blogTitle: 'Adding a blog',
+    blogText: null,
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.528 ms - -[0m
+Finding blog details { blogid: '5c97d70ae85a0e2369402b36' }
+{ createdOn: 2019-03-24T19:13:39.207Z,
+  _id: 5c97d70ae85a0e2369402b36,
+  blogTitle: 'Adding a blog',
+  blogText: null,
+  __v: 0 }
+[0mGET /api/blog/5c97d70ae85a0e2369402b36 [32m200 [0m1.890 ms - 125[0m
+Finding blog details { blogid: '5c97d70ae85a0e2369402b36' }
+{ createdOn: 2019-03-24T19:13:39.207Z,
+  _id: 5c97d70ae85a0e2369402b36,
+  blogTitle: 'Adding a blog',
+  blogText: null,
+  __v: 0 }
+[0mGET /api/blog/5c97d70ae85a0e2369402b36 [36m304 [0m1.491 ms - -[0m
+Deleting blog entry: 5c97d70ae85a0e2369402b36
+{}
+[0mDELETE /api/blog/5c97d70ae85a0e2369402b36 [32m204 [0m1.403 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m2.014 ms - 821[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.258 ms - -[0m
+Finding blog details { blogid: '5c9421fd1562594611df98c4' }
+{ createdOn: 2019-03-21T23:44:20.117Z,
+  _id: 5c9421fd1562594611df98c4,
+  blogTitle: 'Does this work',
+  blogText: 'Test test test. Hey I edited this.',
+  __v: 0 }
+[0mGET /api/blog/5c9421fd1562594611df98c4 [32m200 [0m1.989 ms - 158[0m
+Finding blog details { blogid: '5c9421fd1562594611df98c4' }
+{ createdOn: 2019-03-21T23:44:20.117Z,
+  _id: 5c9421fd1562594611df98c4,
+  blogTitle: 'Does this work',
+  blogText: 'Test test test. Hey I edited this.',
+  __v: 0 }
+[0mGET /api/blog/5c9421fd1562594611df98c4 [36m304 [0m2.337 ms - -[0m
+[0mGET / [32m200 [0m0.564 ms - 6580[0m
+[0mGET / [32m200 [0m0.536 ms - 6580[0m
+[0mGET / [32m200 [0m0.545 ms - 6580[0m
+[0mGET / [32m200 [0m0.541 ms - 6580[0m
+[0mGET / [32m200 [0m0.571 ms - 6580[0m
+[0mGET / [32m200 [0m0.533 ms - 6580[0m
+[0mGET /w00tw00t.at.blackhats.romanian.anti-sec:) [33m404 [0m1.002 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpMyAdmin/scripts/setup.php [33m404 [0m0.839 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpmyadmin/scripts/setup.php [33m404 [0m0.868 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /pma/scripts/setup.php [33m404 [0m0.847 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /myadmin/scripts/setup.php [33m404 [0m0.839 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /MyAdmin/scripts/setup.php [33m404 [0m2.656 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /w00tw00t.at.blackhats.romanian.anti-sec:) [33m404 [0m0.748 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpMyAdmin/scripts/setup.php [33m404 [0m0.699 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpmyadmin/scripts/setup.php [33m404 [0m1.163 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /pma/scripts/setup.php [33m404 [0m0.675 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /myadmin/scripts/setup.php [33m404 [0m0.715 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /MyAdmin/scripts/setup.php [33m404 [0m0.725 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /TP/public/index.php [33m404 [0m0.756 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET / [32m200 [0m0.573 ms - 6580[0m
+[0mGET /stylesheets/blog-style.css [32m200 [0m0.891 ms - 1561[0m
+[0mGET /lib/angular-route.min.js [32m200 [0m1.347 ms - 3884[0m
+[0mGET /blogApp.js [32m200 [0m1.382 ms - 4843[0m
+[0mGET /lib/angular-ui-router.min.js [32m200 [0m1.378 ms - 19546[0m
+[0mGET /images/dan-logo.png [32m200 [0m0.784 ms - 6571[0m
+[0mGET /images/dan-logo.png [36m304 [0m0.301 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m4.171 ms - 821[0m
+[0mGET / [36m304 [0m0.447 ms - -[0m
+[0mGET /stylesheets/blog-style.css [36m304 [0m0.568 ms - -[0m
+[0mGET /lib/angular-route.min.js [36m304 [0m0.611 ms - -[0m
+[0mGET /blogApp.js [36m304 [0m0.639 ms - -[0m
+[0mGET /lib/angular-ui-router.min.js [36m304 [0m0.607 ms - -[0m
+[0mGET /images/dan-logo.png [36m304 [0m0.209 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.271 ms - -[0m
+[0mGET /images/dan-logo.png [32m200 [0m0.435 ms - 6571[0m
+{ blogTitle: 'Test', blogText: 'Grant dum' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca138946f326e1cc150996f,
+  blogTitle: 'Test',
+  blogText: 'Grant dum',
+  __v: 0 }
+[0mPOST /api/blog [32m201 [0m2.059 ms - 123[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca138946f326e1cc150996f,
+    blogTitle: 'Test',
+    blogText: 'Grant dum',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m4.077 ms - 935[0m
+Finding blog details { blogid: '5ca138946f326e1cc150996f' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca138946f326e1cc150996f,
+  blogTitle: 'Test',
+  blogText: 'Grant dum',
+  __v: 0 }
+[0mGET /api/blog/5ca138946f326e1cc150996f [32m200 [0m1.943 ms - 123[0m
+Finding blog details { blogid: '5ca138946f326e1cc150996f' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca138946f326e1cc150996f,
+  blogTitle: 'Test',
+  blogText: 'Grant dum',
+  __v: 0 }
+[0mGET /api/blog/5ca138946f326e1cc150996f [36m304 [0m3.653 ms - -[0m
+Deleting blog entry: 5ca138946f326e1cc150996f
+{}
+[0mDELETE /api/blog/5ca138946f326e1cc150996f [32m204 [0m1.453 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m2.263 ms - 821[0m
+[0mGET / [32m200 [0m0.492 ms - 6580[0m
+[0mGET / [32m200 [0m0.540 ms - 6580[0m
+[0mGET /mysql/admin/index.php?lang=en [33m404 [0m0.760 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /mysql/dbadmin/index.php?lang=en [33m404 [0m0.632 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /mysql/sqlmanager/index.php?lang=en [33m404 [0m0.631 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /mysql/mysqlmanager/index.php?lang=en [33m404 [0m0.668 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpmyadmin/index.php?lang=en [33m404 [0m0.625 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpMyadmin/index.php?lang=en [33m404 [0m0.705 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpMyAdmin/index.php?lang=en [33m404 [0m0.642 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpmyAdmin/index.php?lang=en [33m404 [0m1.217 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpmyadmin2/index.php?lang=en [33m404 [0m0.668 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /phpmyadmin3/index.php?lang=en [33m404 [0m0.703 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /TP/public/index.php [33m404 [0m7.679 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /TP/index.php [33m404 [0m0.710 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /thinkphp/html/public/index.php [33m404 [0m1.551 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /html/public/index.php [33m404 [0m0.744 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /public/index.php [33m404 [0m0.782 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /TP/html/public/index.php [33m404 [0m0.723 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /elrekt.php [33m404 [0m0.761 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET /index.php [33m404 [0m0.734 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET / [32m200 [0m1.089 ms - 6580[0m
+[0mGET / [32m200 [0m0.526 ms - 6580[0m
+[0mGET / [32m200 [0m1.030 ms - 6580[0m
+[0mGET / [32m200 [0m0.549 ms - 6580[0m
+[0mGET / [32m200 [0m0.568 ms - 6580[0m
+[0mGET / [32m200 [0m0.493 ms - 6580[0m
+[0mGET /acadmin.php [33m404 [0m1.299 ms - 1766[0m
+Error: Failed to lookup view "error" in views directory "/home/bitnami/blogger4/views"
+    at Function.render (/home/bitnami/blogger4/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/bitnami/blogger4/node_modules/express/lib/response.js:1008:7)
+    at /home/bitnami/blogger4/app.js:41:7
+    at Layer.handle_error (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:315:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at /home/bitnami/blogger4/app.js:30:3
+    at Layer.handle [as handle_request] (/home/bitnami/blogger4/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:317:13)
+    at /home/bitnami/blogger4/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/bitnami/blogger4/node_modules/express/lib/router/index.js:275:10)
+    at SendStream.error (/home/bitnami/blogger4/node_modules/serve-static/index.js:121:7)
+    at emitOne (events.js:116:13)
+[0mGET / [32m200 [0m0.561 ms - 6580[0m
+[0mGET / [32m200 [0m0.547 ms - 6580[0m
+[0mGET / [32m200 [0m0.533 ms - 6580[0m
+[0mGET / [32m200 [0m0.539 ms - 6580[0m
+[0mGET / [32m200 [0m0.531 ms - 6580[0m
+[0mGET / [32m200 [0m0.550 ms - 6580[0m
+[0mGET / [32m200 [0m0.558 ms - 6580[0m
+[0mGET / [36m304 [0m2.206 ms - -[0m
+[0mGET /stylesheets/blog-style.css [32m200 [0m1.226 ms - 1561[0m
+[0mGET /lib/angular-route.min.js [36m304 [0m0.834 ms - -[0m
+[0mGET /lib/angular-ui-router.min.js [36m304 [0m0.607 ms - -[0m
+[0mGET /blogApp.js [36m304 [0m0.296 ms - -[0m
+[0mGET /images/dan-logo.png [36m304 [0m0.598 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c49000b981c633afacc,
+    blogTitle: 'Longer test',
+    blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m42.602 ms - 821[0m
+Finding blog details { blogid: '5ca04c49000b981c633afacc' }
+Finding blog details { blogid: '5ca04c49000b981c633afacc' }
+{ createdOn: 2019-03-31T05:11:47.385Z,
+  _id: 5ca04c49000b981c633afacc,
+  blogTitle: 'Longer test',
+  blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  __v: 0 }
+[0mGET /api/blog/5ca04c49000b981c633afacc [32m200 [0m18.273 ms - 570[0m
+{ createdOn: 2019-03-31T05:11:47.385Z,
+  _id: 5ca04c49000b981c633afacc,
+  blogTitle: 'Longer test',
+  blogText: '    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  __v: 0 }
+[0mGET /api/blog/5ca04c49000b981c633afacc [32m200 [0m73.175 ms - 570[0m
+Deleting blog entry: 5ca04c49000b981c633afacc
+{}
+[0mDELETE /api/blog/5ca04c49000b981c633afacc [32m204 [0m9.361 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m2.109 ms - 260[0m
+{ blogTitle: 'fff', blogText: 'ffff' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca22c256f326e1cc1509970,
+  blogTitle: 'fff',
+  blogText: 'ffff',
+  __v: 0 }
+[0mPOST /api/blog [32m201 [0m10.601 ms - 117[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca22c256f326e1cc1509970,
+    blogTitle: 'fff',
+    blogText: 'ffff',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m2.332 ms - 368[0m
+Finding blog details { blogid: '5ca22c256f326e1cc1509970' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca22c256f326e1cc1509970,
+  blogTitle: 'fff',
+  blogText: 'ffff',
+  __v: 0 }
+[0mGET /api/blog/5ca22c256f326e1cc1509970 [32m200 [0m1.910 ms - 117[0m
+Finding blog details { blogid: '5ca22c256f326e1cc1509970' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca22c256f326e1cc1509970,
+  blogTitle: 'fff',
+  blogText: 'ffff',
+  __v: 0 }
+[0mGET /api/blog/5ca22c256f326e1cc1509970 [32m200 [0m1.387 ms - 117[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:14:19.528Z,
+    _id: 5ca22c256f326e1cc1509970,
+    blogTitle: 'fff',
+    blogText: 'ffff',
+    __v: 0 } ]
+[0mGET /api/blog [36m304 [0m2.275 ms - -[0m
+Finding blog details { blogid: '5ca22c256f326e1cc1509970' }
+Finding blog details { blogid: '5ca22c256f326e1cc1509970' }
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca22c256f326e1cc1509970,
+  blogTitle: 'fff',
+  blogText: 'ffff',
+  __v: 0 }
+[0mGET /api/blog/5ca22c256f326e1cc1509970 [36m304 [0m2.861 ms - -[0m
+{ createdOn: 2019-03-31T05:14:19.528Z,
+  _id: 5ca22c256f326e1cc1509970,
+  blogTitle: 'fff',
+  blogText: 'ffff',
+  __v: 0 }
+[0mGET /api/blog/5ca22c256f326e1cc1509970 [32m200 [0m3.730 ms - 117[0m
+Deleting blog entry: 5ca22c256f326e1cc1509970
+{}
+[0mDELETE /api/blog/5ca22c256f326e1cc1509970 [32m204 [0m1.393 ms - -[0m
+Creating all blogs list
+[ { createdOn: 2019-03-21T23:44:20.117Z,
+    _id: 5c9421fd1562594611df98c4,
+    blogTitle: 'Does this work',
+    blogText: 'Test test test. Hey I edited this.',
+    __v: 0 },
+  { createdOn: 2019-03-31T05:11:47.385Z,
+    _id: 5ca04c27000b981c633afacb,
+    blogTitle: 'Oh',
+    blogText: 'lookie',
+    __v: 0 } ]
+[0mGET /api/blog [32m200 [0m1.838 ms - 260[0m
+Killed
+npm ERR! code ELIFECYCLE
+npm ERR! errno 137
+npm ERR! blogger@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 137
+npm ERR! 
+npm ERR! Failed at the blogger@0.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/bitnami/.npm/_logs/2019-04-01T15_22_36_040Z-debug.log
