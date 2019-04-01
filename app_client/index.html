@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="blogApp">
+<head>
+    <title>Dan Hartenstine's Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/blog-style.css">
+    <link rel="icon" href="/images/dan-logo.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="/lib/angular-route.min.js"></script>
+    <script src="/lib/angular-ui-router.min.js"></script>
+    <script src="/blogApp.js"></script>
+</head>
+<body>
+    <!-- Nav bar -->
+    <div class="banner">
+        <div class="topleft">
+            <a href="#/">
+                <img src="/images/dan-logo.png" alt="Dan's Blog Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-color" href="#/">My Blog</a></li>
+                <li><a class="navbar-color" href="#/blog">Blog List</a></li>
+                <li><a class="navbar-color" href="#/blogadd">Add A Blog Entry</a></li>
+            </ul>
+        </nav>
+    </div> <!-- End nav bar -->
+
+    <!-- Angular page scripts -->
+
+    <!-- home page -->
+    <script type="text/ng-template" id="pages/home.html">
+        <div class="container nav-box">
+            <p></p>
+            <h1> {{ vm.title }} </h1>
+            <h4> {{ vm.message }} </h4>
+        </div>
+    </script> <!-- End home page -->
+
+    <!-- blog list page -->
+    <script type="text/ng-template" id="pages/blog.html">
+        <div class="container nav-box">
+            <h1> {{ vm.title }} </h1>
+            <div ng-repeat="blog in vm.blog">
+                <div class="card text-black mb-3">
+                    <div class="card-header"><h5> {{ blog.blogTitle }}</h5></div>
+                    <div class="card-body">
+                        <p class="card-text"> {{ blog.blogText }} </p>
+                        <p class="card-footer">
+                            {{ blog.createdOn }}
+                            <a href="#/blogedit/{{ blog.blogid }}" role="button"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a href="#/blogdelete/{{ blog.blogid }}" role="button"><span class="glyphicon glyphicon-remove"></span></a>
+                        </p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </script> <!-- End blog list page -->
+
+
+    <!-- blog add page -->
+    <script type="text/ng-template" id="pages/blogadd.html">
+        <div class="container nav-box">
+            <h1> {{ vm.pageHeader }} </h1>
+            <div class="blog-text-container">
+                <form name="userForm" ng-Controller="addController" ng-submit="vm.onSubmit()">
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Title</label>
+                        <input class="form-control" type="text" placeholder="Blog Title" name="blogTitle">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Text</label>
+                        <textarea class="form-control" name="blogText" rows="10" type="text"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </script>  <!-- end blog add page -->
+
+    <!-- blog delete page -->
+    <script type="text/ng-template" id="pages/blogdelete.html">
+        <div class="container nav-box">
+            <h1> {{ vm.pageHeader }} </h1>
+            <div class="blog-text-container">
+                <form name="userForm" ng-Controller="deleteController" ng-submit="vm.onSubmit()">
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Title</label>
+                        <input class="form-control" id="blogTitle" name="blogTitle" value="{{ vm.blog.blogTitle }}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Text</label>
+                        <textarea class="form-control" id="blogText" name="blogText" rows="10" readonly>{{ vm.blog.blogText }}</textarea>
+                        <br \>
+                        <input class="btn btn-danger" value="Delete Post" type="submit">
+                        <input type="submit" class="btn btn-primary" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script> <!-- end blog delete page -->
+
+    <!-- blog edit page -->
+    <script type="text/ng-template" id="pages/blogedit.html">
+        <div class="container nav-box">
+            <h1> {{ vm.pageHeader }} </h1>
+            <div class="blog-text-container">
+                <form name="userForm" ng-Controller="editController" ng-submit="vm.onSubmit()">
+                    <div class="form-group">
+                        <label class="col-2 col-form-label">Blog Title</label>
+                        <input class="form-control" id="blogTitle" name="blogTitle" value="{{ vm.blog.blogTitle }}">
+                        <label class="col-2 col-form-label">Blog Text</label>
+                        <textarea class="form-control" id="blogText" rows="10" type="text">{{ vm.blog.blogText }}</textarea>
+                        <input type="submit" class="btn btn-primary" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </script> <!-- end blog edit page -->
+
+    <div ng-view></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

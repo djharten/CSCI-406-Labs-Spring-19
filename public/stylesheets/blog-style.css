@@ -13,9 +13,9 @@ body {
   border: 2px solid #0d0221;
 }
 
-.nav-box p {
-  padding-left: 8px;
-  padding-right: 8px;
+.nav-box p, h1, h4, h5 {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .tab-content img {
@@ -97,10 +97,24 @@ h1 {
 h5 {
   font-size: 18pt;
   font-weight: bold;
-  text-shadow: 3px 3px #999999;
 }
 
 .blog-text-container {
   width: 50%;
   margin: auto;
+}
+
+hr {
+  display: block;
+  margin-before: 0.5em;
+  margin-after: 0.5em;
+  margin-start: auto;
+  margin-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.change-buttons {
+  float: right;
 }
