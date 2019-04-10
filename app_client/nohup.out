@@ -102,3 +102,14 @@ Finding blog details { blogid: '5ca22dc70ef9b633185e8fa4' }
   blogText: 'ffff',
   __v: 0 }
 [0mGET /api/blog/5ca22dc70ef9b633185e8fa4 [32m200 [0m5.115 ms - 116[0m
+Killed
+npm ERR! code ELIFECYCLE
+npm ERR! errno 137
+npm ERR! blogger@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 137
+npm ERR! 
+npm ERR! Failed at the blogger@0.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/bitnami/.npm/_logs/2019-04-01T15_29_09_431Z-debug.log
