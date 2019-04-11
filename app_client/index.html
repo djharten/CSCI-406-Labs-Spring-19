@@ -43,9 +43,9 @@
                     <div class="card-body">
                         <p class="card-text"> {{ blog.blogText }} </p>
                         <p class="card-footer">
-                            {{ blog.createdOn }}
-                            <a ng-show="vm.isLoggedIn()" href="#/blogedit/{{ blog.blogid }}" role="button"><span class="glyphicon glyphicon-edit"></span></a>
-                            <a ng-show="vm.isLoggedIn()" href="#/blogdelete/{{ blog.blogid }}" role="button"><span class="glyphicon glyphicon-remove"></span></a>
+                            Published by {{ blog.userName }} on {{ blog.createdOn }} <br />
+                            <a ng-show="vm.isLoggedIn() && vm.isAuthor(blog)" href="#/blogedit/{{ blog.blogid }}" role="button"><span class="glyphicon glyphicon-edit"></span></a>
+                            <a ng-show="vm.isLoggedIn() && vm.isAuthor(blog)" href="#/blogdelete/{{ blog.blogid }}" role="button"><span class="glyphicon glyphicon-remove"></span></a>
                         </p>
                     </div>
                     <hr>
