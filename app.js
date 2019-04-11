@@ -56,13 +56,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-/*
-  THINGS TO DO IN BITNAMI AFTER FINISHING LOCALLY:
-      - npm install jsonwebtoken --save (pg 358)
-      - create JWT_SECRET data (pg 359)
-      - npm install dotenv --save (pg 359)
-      - npm install passport --save (pg 360)
-      - npm install passport-local --save (pg 360)
-      - npm install express-jwt --save (pg 368)
-*/

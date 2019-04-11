@@ -36,6 +36,8 @@ var buildBlogList = function(req, res, results) {
         blogs.push({
             blogTitle: obj.blogTitle,
             blogText: obj.blogText,
+            userName: obj.userName,
+            userEmail: obj.userEmail,
             createdOn: date,
             blogid: obj._id
         });
@@ -78,7 +80,9 @@ module.exports.addOne = function(req, res) {
     blogModel
         .create({
             blogTitle: req.body.blogTitle,
-            blogText: req.body.blogText
+            blogText: req.body.blogText,
+            userName: req.body.userName,
+            userEmail: req.body.userEmail
         }, function(err, blogger) {
                 if(err) {
                     console.log(err);
