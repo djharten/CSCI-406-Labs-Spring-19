@@ -5,6 +5,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var passport = require('passport');
+var socket = require('socket.io');
 
 require('./app_api/models/db');
 require('./app_api/config/passport');
@@ -56,3 +57,9 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+/*
+ * THINGS TO INSTALL ONCE LIVE:
+ *    npm install --save socket.io
+ *    npm install --save socketio socket.io-client
+ */

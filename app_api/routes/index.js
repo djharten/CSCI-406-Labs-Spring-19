@@ -7,6 +7,9 @@ var auth = jwt({
 });
 var ctrlBlog = require('../controllers/blog');
 var ctrlAuth = require('../controllers/authentication');
+var ctrlChat = require('../controllers/chat');
+var mongoose = require('mongoose');
+var chatModel = mongoose.model('Chat');
 
 /* GET, POST, PUT and DELETE API routes for blog pages */
 router.get('/blog', ctrlBlog.blogList);
@@ -17,5 +20,7 @@ router.delete('/blog/:blogid', auth, ctrlBlog.deleteOne);
 
 router.post('/register', ctrlAuth.register);
 router.post('/login', ctrlAuth.login);
+
+router.get('/chat/:room', ctrlChat.chatList);
 
 module.exports = router;
